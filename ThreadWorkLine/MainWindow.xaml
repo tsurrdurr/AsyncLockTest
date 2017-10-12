@@ -5,8 +5,48 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ThreadWorkLine"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="185.715" Width="525">
+    <d:DesignData.DataContext>
+        <local:MainViewModel />
+    </d:DesignData.DataContext>
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
+            <TextBlock Text="Thread 1" 
+                       HorizontalAlignment="Center"/>
+            <TextBlock Text="State" 
+                       HorizontalAlignment="Center"
+                       Margin="0,20,0,0" />
+            <TextBox Text="{Binding Thread1StateText}"
+                     Margin="3"
+                     TextWrapping="Wrap"
+                     HorizontalAlignment="Stretch"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <TextBlock Text="Thread 2" 
+                       HorizontalAlignment="Center"/>
+            <TextBlock Text="State" 
+                       HorizontalAlignment="Center"
+                       Margin="0,20,0,0" />
+            <TextBox Text="{Binding Thread2StateText}"
+                     TextWrapping="Wrap"
+                     Margin="3"
+                     HorizontalAlignment="Stretch"/>
+        </StackPanel>
+        <StackPanel Grid.Column="2">
+            <TextBlock Text="Thread 3" 
+                       HorizontalAlignment="Center"/>
+            <TextBlock Text="State" 
+                       HorizontalAlignment="Center"
+                       Margin="0,20,0,0" />
+            <TextBox Text="{Binding Thread3StateText}"
+                     TextWrapping="Wrap"
+                     Margin="3"
+                     HorizontalAlignment="Stretch"/>
+        </StackPanel>
     </Grid>
 </Window>

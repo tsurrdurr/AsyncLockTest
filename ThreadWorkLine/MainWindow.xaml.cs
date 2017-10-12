@@ -23,6 +23,7 @@ namespace ThreadWorkLine
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new MainViewModel();
         }
     }
 }
